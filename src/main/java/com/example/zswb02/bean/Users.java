@@ -36,4 +36,8 @@ public class Users {
      * 用户角色 非空（0代表项目发布者，1代表项目接单者）
      */
     private Integer userRole;
+
+    public Users(String userName, String userEmail, String s1, Integer userRole) {
+
+    }
 }
