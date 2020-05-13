@@ -1,5 +1,16 @@
 package com.example.zswb02.bean;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Resume {
     /**
      * 简历编号 自增、主键
@@ -40,68 +51,4 @@ public class Resume {
      * 所属人 非空
      */
     private Integer resumePerson;
-
-    public Integer getRusumeId() {
-        return rusumeId;
-    }
-
-    public void setRusumeId(Integer rusumeId) {
-        this.rusumeId = rusumeId;
-    }
-
-    public String getResumeWorkstatus() {
-        return resumeWorkstatus;
-    }
-
-    public void setResumeWorkstatus(String resumeWorkstatus) {
-        this.resumeWorkstatus = resumeWorkstatus;
-    }
-
-    public String getResumeWorkdirection() {
-        return resumeWorkdirection;
-    }
-
-    public void setResumeWorkdirection(String resumeWorkdirection) {
-        this.resumeWorkdirection = resumeWorkdirection;
-    }
-
-    public String getResumeSpecificwork() {
-        return resumeSpecificwork;
-    }
-
-    public void setResumeSpecificwork(String resumeSpecificwork) {
-        this.resumeSpecificwork = resumeSpecificwork;
-    }
-
-    public Integer getResumeSkill() {
-        return resumeSkill;
-    }
-
-    public void setResumeSkill(Integer resumeSkill) {
-        this.resumeSkill = resumeSkill;
-    }
-
-    public Integer getResumeWroks() {
-        return resumeWroks;
-    }
-
-    public void setResumeWroks(Integer resumeWroks) {
-        this.resumeWroks = resumeWroks;
-    }
-
-    public String getResumeIntroduce() {
-        return resumeIntroduce;
-    }
-
-    public void setResumeIntroduce(String resumeIntroduce) {
-        this.resumeIntroduce = resumeIntroduce;
-    }
-
-    public Integer getResumePerson() {
-        return resumePerson;
-    }
-
-    public void setResumePerson(Integer resumePerson) {
-        this.resumePerson = resumePerson;
-    }
 }

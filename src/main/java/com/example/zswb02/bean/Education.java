@@ -1,7 +1,17 @@
 package com.example.zswb02.bean;
 
 import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Education {
     /**
      * 编号 自增、主键
@@ -37,60 +47,4 @@ public class Education {
      * 所属人 非空
      */
     private Integer educationPerson;
-
-    public Integer getEducationId() {
-        return educationId;
-    }
-
-    public void setEducationId(Integer educationId) {
-        this.educationId = educationId;
-    }
-
-    public Date getEducationStart() {
-        return educationStart;
-    }
-
-    public void setEducationStart(Date educationStart) {
-        this.educationStart = educationStart;
-    }
-
-    public Date getEducationEnd() {
-        return educationEnd;
-    }
-
-    public void setEducationEnd(Date educationEnd) {
-        this.educationEnd = educationEnd;
-    }
-
-    public String getSchoolName() {
-        return schoolName;
-    }
-
-    public void setSchoolName(String schoolName) {
-        this.schoolName = schoolName;
-    }
-
-    public String getProfession() {
-        return profession;
-    }
-
-    public void setProfession(String profession) {
-        this.profession = profession;
-    }
-
-    public String getEducationLevel() {
-        return educationLevel;
-    }
-
-    public void setEducationLevel(String educationLevel) {
-        this.educationLevel = educationLevel;
-    }
-
-    public Integer getEducationPerson() {
-        return educationPerson;
-    }
-
-    public void setEducationPerson(Integer educationPerson) {
-        this.educationPerson = educationPerson;
-    }
 }

@@ -1,5 +1,16 @@
 package com.example.zswb02.bean;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Skills {
     /**
      * 技能编号 自增、主键
@@ -15,28 +26,4 @@ public class Skills {
      * 所属人 非空
      */
     private Integer skillPerson;
-
-    public Integer getSkillId() {
-        return skillId;
-    }
-
-    public void setSkillId(Integer skillId) {
-        this.skillId = skillId;
-    }
-
-    public String getSkillEvaluate() {
-        return skillEvaluate;
-    }
-
-    public void setSkillEvaluate(String skillEvaluate) {
-        this.skillEvaluate = skillEvaluate;
-    }
-
-    public Integer getSkillPerson() {
-        return skillPerson;
-    }
-
-    public void setSkillPerson(Integer skillPerson) {
-        this.skillPerson = skillPerson;
-    }
 }
