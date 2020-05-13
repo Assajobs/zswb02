@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="generateService" value="true" />
+        <option name="generateServiceInterface" value="true" />
+        <option name="javaMapperPackage" value="com.example.zswb02.dao" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="javaModelPackage" value="com.example.zswb02.bean" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="zswb02" />
+        <option name="lombokAllArgConstructor" value="true" />
+        <option name="lombokGetterSetterAnnotation" value="true" />
+        <option name="lombokNoArgsConstructor" value="true" />
+        <option name="modelAddToString" value="true" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="zswb02">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.example.zswb02.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaModelPacakge" value="com.example.zswb02.bean" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.example.zswb02.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaServicePackage" value="com.example.zswb02.service.impl" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="xmlPackage" value="com.example.zswb02.dao" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="zswb:education">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="education_id" />
+                  <option name="javaModelName" value="Education" />
+                  <option name="moduleName" value="zswb02" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="zswb:identification">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="identity_id" />
+                  <option name="javaModelName" value="Identification" />
+                  <option name="moduleName" value="zswb02" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="zswb:job__information">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="job_id" />
+                  <option name="javaModelName" value="JobInformation" />
+                  <option name="moduleName" value="zswb02" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="zswb:project">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="project_id" />
+                  <option name="javaModelName" value="Project" />
+                  <option name="moduleName" value="zswb02" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="zswb:resume">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="rusume_id" />
+                  <option name="javaModelName" value="Resume" />
+                  <option name="moduleName" value="zswb02" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="zswb:skills">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="skill_id" />
+                  <option name="javaModelName" value="Skills" />
+                  <option name="moduleName" value="zswb02" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="zswb:users">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="user_id" />
+                  <option name="javaModelName" value="Users" />
+                  <option name="moduleName" value="zswb02" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="zswb:works">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="works_id" />
+                  <option name="javaModelName" value="Works" />
+                  <option name="moduleName" value="zswb02" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="xmlMapperPackage" value="com.example.zswb02.dao" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>
