@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.zswb02.dao.IdentificationMapper">
+  <resultMap id="BaseResultMap" type="com.example.zswb02.bean.Identification">
+    <!--@mbg.generated-->
+    <!--@Table identification-->
+    <id column="identity_id" jdbcType="INTEGER" property="identityId" />
+    <result column="identity_card" jdbcType="VARCHAR" property="identityCard" />
+    <result column="identity_person" jdbcType="INTEGER" property="identityPerson" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    identity_id, identity_card, identity_person
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from identification
+    where identity_id = #{identityId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from identification
+    where identity_id = #{identityId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="identity_id" keyProperty="identityId" parameterType="com.example.zswb02.bean.Identification" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into identification (identity_card, identity_person)
+    values (#{identityCard,jdbcType=VARCHAR}, #{identityPerson,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="identity_id" keyProperty="identityId" parameterType="com.example.zswb02.bean.Identification" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into identification
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="identityCard != null">
+        identity_card,
+      </if>
+      <if test="identityPerson != null">
+        identity_person,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="identityCard != null">
+        #{identityCard,jdbcType=VARCHAR},
+      </if>
+      <if test="identityPerson != null">
+        #{identityPerson,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.zswb02.bean.Identification">
+    <!--@mbg.generated-->
+    update identification
+    <set>
+      <if test="identityCard != null">
+        identity_card = #{identityCard,jdbcType=VARCHAR},
+      </if>
+      <if test="identityPerson != null">
+        identity_person = #{identityPerson,jdbcType=INTEGER},
+      </if>
+    </set>
+    where identity_id = #{identityId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.zswb02.bean.Identification">
+    <!--@mbg.generated-->
+    update identification
+    set identity_card = #{identityCard,jdbcType=VARCHAR},
+      identity_person = #{identityPerson,jdbcType=INTEGER}
+    where identity_id = #{identityId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.zswb02.dao.ResumeMapper">
+  <resultMap id="BaseResultMap" type="com.example.zswb02.bean.Resume">
+    <!--@mbg.generated-->
+    <!--@Table resume-->
+    <id column="rusume_id" jdbcType="INTEGER" property="rusumeId" />
+    <result column="resume_workstatus" jdbcType="VARCHAR" property="resumeWorkstatus" />
+    <result column="resume_workdirection" jdbcType="VARCHAR" property="resumeWorkdirection" />
+    <result column="resume_specificwork" jdbcType="VARCHAR" property="resumeSpecificwork" />
+    <result column="resume_skill" jdbcType="INTEGER" property="resumeSkill" />
+    <result column="resume_wroks" jdbcType="INTEGER" property="resumeWroks" />
+    <result column="resume_introduce" jdbcType="VARCHAR" property="resumeIntroduce" />
+    <result column="resume_person" jdbcType="INTEGER" property="resumePerson" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    rusume_id, resume_workstatus, resume_workdirection, resume_specificwork, resume_skill, 
+    resume_wroks, resume_introduce, resume_person
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from resume
+    where rusume_id = #{rusumeId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from resume
+    where rusume_id = #{rusumeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="rusume_id" keyProperty="rusumeId" parameterType="com.example.zswb02.bean.Resume" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into resume (resume_workstatus, resume_workdirection, 
+      resume_specificwork, resume_skill, resume_wroks, 
+      resume_introduce, resume_person)
+    values (#{resumeWorkstatus,jdbcType=VARCHAR}, #{resumeWorkdirection,jdbcType=VARCHAR}, 
+      #{resumeSpecificwork,jdbcType=VARCHAR}, #{resumeSkill,jdbcType=INTEGER}, #{resumeWroks,jdbcType=INTEGER}, 
+      #{resumeIntroduce,jdbcType=VARCHAR}, #{resumePerson,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="rusume_id" keyProperty="rusumeId" parameterType="com.example.zswb02.bean.Resume" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into resume
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="resumeWorkstatus != null">
+        resume_workstatus,
+      </if>
+      <if test="resumeWorkdirection != null">
+        resume_workdirection,
+      </if>
+      <if test="resumeSpecificwork != null">
+        resume_specificwork,
+      </if>
+      <if test="resumeSkill != null">
+        resume_skill,
+      </if>
+      <if test="resumeWroks != null">
+        resume_wroks,
+      </if>
+      <if test="resumeIntroduce != null">
+        resume_introduce,
+      </if>
+      <if test="resumePerson != null">
+        resume_person,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="resumeWorkstatus != null">
+        #{resumeWorkstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeWorkdirection != null">
+        #{resumeWorkdirection,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeSpecificwork != null">
+        #{resumeSpecificwork,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeSkill != null">
+        #{resumeSkill,jdbcType=INTEGER},
+      </if>
+      <if test="resumeWroks != null">
+        #{resumeWroks,jdbcType=INTEGER},
+      </if>
+      <if test="resumeIntroduce != null">
+        #{resumeIntroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="resumePerson != null">
+        #{resumePerson,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.zswb02.bean.Resume">
+    <!--@mbg.generated-->
+    update resume
+    <set>
+      <if test="resumeWorkstatus != null">
+        resume_workstatus = #{resumeWorkstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeWorkdirection != null">
+        resume_workdirection = #{resumeWorkdirection,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeSpecificwork != null">
+        resume_specificwork = #{resumeSpecificwork,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeSkill != null">
+        resume_skill = #{resumeSkill,jdbcType=INTEGER},
+      </if>
+      <if test="resumeWroks != null">
+        resume_wroks = #{resumeWroks,jdbcType=INTEGER},
+      </if>
+      <if test="resumeIntroduce != null">
+        resume_introduce = #{resumeIntroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="resumePerson != null">
+        resume_person = #{resumePerson,jdbcType=INTEGER},
+      </if>
+    </set>
+    where rusume_id = #{rusumeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.zswb02.bean.Resume">
+    <!--@mbg.generated-->
+    update resume
+    set resume_workstatus = #{resumeWorkstatus,jdbcType=VARCHAR},
+      resume_workdirection = #{resumeWorkdirection,jdbcType=VARCHAR},
+      resume_specificwork = #{resumeSpecificwork,jdbcType=VARCHAR},
+      resume_skill = #{resumeSkill,jdbcType=INTEGER},
+      resume_wroks = #{resumeWroks,jdbcType=INTEGER},
+      resume_introduce = #{resumeIntroduce,jdbcType=VARCHAR},
+      resume_person = #{resumePerson,jdbcType=INTEGER}
+    where rusume_id = #{rusumeId,jdbcType=INTEGER}
+  </update>
+</mapper>
